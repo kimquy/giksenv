@@ -4,6 +4,13 @@
 }
 
 .color-logo{
- color: #2C5D6B;
+ color: #00D4B0;
  font-weight: bold;
+}
+
+.person-name{
+  color: #00D4B0;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
 }
