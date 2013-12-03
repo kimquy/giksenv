@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def show
-    @person = Person.first
+    @person = Person.find_by_slug(params[:id])
   end
 
   def giktuts

@@ -5,6 +5,7 @@ Howgeekwork::Application.routes.draw do
   root :to => "home#index"
 
   get '/view/:id' => 'home#show', as: :person
-  get 'home/giktuts' => 'home#giktuts', as: :giktuts
-  get 'home/about' => 'home#about', as: :about
+  get '/giktuts' => 'home#giktuts', as: :giktuts
+  get '/about' => 'home#about', as: :about
+  get '/lienhe' => 'home#lienhe', as: :lienhe
 end
