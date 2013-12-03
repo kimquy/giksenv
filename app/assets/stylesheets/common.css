@@ -28,3 +28,12 @@ img{
 a{
   color: #4A4A4A !important;
 }
+
+.gik-bio a{
+  color: #00D4B0 !important;
+  font-weight: bold;
+}
+
+.gik-bio{
+  font-size: 14px !important;
+}

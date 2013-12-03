@@ -6,6 +6,8 @@ gem 'rails', '4.0.0'
 gem 'pg'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 gem 'thin'
+gem 'redcarpet'
+gem 'acts-as-taggable-on'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 
@@ -25,4 +27,6 @@ end
 group :development do
   gem 'awesome_print'
   gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
