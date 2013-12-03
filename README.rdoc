@@ -1,4 +1,4 @@
-## gik's Env
+== gik's Env
 
 Ý tưởng của Gik's Env được bắt nguồn từ website này http://usesthis.com. Mục đích của Gik's Env là phỏng vấn các lập trình viên hoặc các designer có kinh nghiệm. Và tìm hiểu xem họ đã làm gì, và môi trường làm việc của họ ra sao, họ sử dụng những phần mềm gì, hay dùng loại máy tính nào để hoàn thành công việc.
 
