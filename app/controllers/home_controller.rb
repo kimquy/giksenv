@@ -6,4 +6,11 @@ class HomeController < ApplicationController
   def show
     @person = Person.first
   end
+
+  def giktuts
+
+  end
+  def about
+
+  end
 end
