@@ -1,9 +1,18 @@
 <div class="row">
   <div class="col-md-7">
-    <%= image_tag person.image, size: '450x300' %>
+    <% if person.photo %>
+      <%= image_tag person.photo.url, size: '450x300' %>
+    <% end %>
   </div>
   <div class="col-md-5">
     <span class="person-name"><%= link_to person.name, person_path(person),style: 'color: #00D4B0 !important;' %></span><br/>
+
+    <% if person.tags %>
+      <% person.get_tags.each do |t| %>
+        <%= link_to t, {action: 'people_by_tag', tag: t}, {class: 'badge', style: 'text-decoration: none; color: white !important;'} %>
+      <% end %>
+    <% end %> <br/>
+
     <span><b><%= person.company %></b></span><br/>
     <span style="font-size:11px;"><%= person.created_at %>.</span> <br/>
 

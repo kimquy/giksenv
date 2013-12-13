@@ -7,6 +7,10 @@ class HomeController < ApplicationController
     @person = Person.find_by_slug(params[:id])
   end
 
+  def people_by_tag
+    @people = Person.tagged_with(params[:tag])
+  end
+
   def giktuts
 
   end

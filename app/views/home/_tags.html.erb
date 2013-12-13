@@ -1,18 +1,10 @@
-<h2>Tags</h2>
+<h2><b>Tags</b></h2>
 
 <div class="row">
   <div class="col-md-12">
-    <span class="badge">Programmer</span>
-    <span class="badge">Linux</span>
-    <span class="badge">Ubuntu</span>
-    <span class="badge">Mac</span>
-    <span class="badge">Hacker</span>
+    <% Person.get_all_tags.each do |t| %>
+      <%= link_to t, {action: 'people_by_tag', tag: t}, {class: 'badge', style: 'text-decoration: none; color: white !important;'} %>
+    <% end %>
   </div>
  </div>
 <br/>
-
-<div class="row">
-  <div class="col-md-12">
-    <span class="badge">Designer</span>
-  </div>
-</div>

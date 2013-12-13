@@ -37,10 +37,13 @@ ActiveAdmin.register Person do
   end
 
   index do
-    column :image do |p|
-      image_tag p.image, size: '100x80'
+    column :photo do |p|
+      if p.photo
+        image_tag p.photo.url, size: '100x80'
+      end
     end
     column :name
+    column :tag_list
     column :email
     column :bio do |p|
       truncate p.bio
@@ -51,4 +54,23 @@ ActiveAdmin.register Person do
     column :linkedin
     default_actions
   end
+
+  form do |f|
+    f.inputs do
+      f.input :name, :label => "Name"
+      f.input :email, :label => "Email"
+      f.input :bio, :label => "Bio"
+      f.input :company, :label => "Company"
+      f.input :github, :label => "Github"
+      f.input :twitter, :label => "Twitter"
+      f.input :linkedin, :label => "Linkedin"
+      f.input :slug, :label => "Slug"
+      f.input :tag_list, :label => "Tags"
+      f.input :photo, :label => "Photo", :as => :file
+    end
+    f.actions do
+      f.action :submit, :as => :button
+    end
+  end
+
 end

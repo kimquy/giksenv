@@ -84,6 +84,9 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dragonfly (1.0.1)
+      multi_json (~> 1.0)
+      rack
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
@@ -202,6 +205,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)
+  dragonfly (~> 1.0.0)
   jbuilder (~> 1.2)
   jquery-rails
   pg
