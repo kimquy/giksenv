@@ -23,4 +23,12 @@ class Person < ActiveRecord::Base
   def self.get_all_tags
     Person.tag_counts_on(:tags).map(&:name)
   end
+
+  def self.text_search(query)
+    if query.present?
+      where("name ilike :q", q: "%#{query}%")
+    else
+      scoped
+    end
+  end
 end

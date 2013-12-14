@@ -3,6 +3,10 @@ class HomeController < ApplicationController
     @people = Person.all
   end
 
+  def search
+    @people = Person.text_search(params[:query])
+  end
+
   def show
     @person = Person.find_by_slug(params[:id])
   end

@@ -13,9 +13,17 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><%= link_to "Trang Chủ", root_url, {class: 'my-a'} %></li>
-      <li><%= link_to "About gik's Env", about_path, {class: 'my-a'} %></li>
-      <li><a href="#" class="my-a">Liên Hệ</a></li>
+      <li><%= link_to "Trang Chủ", root_url, {style: 'text-decoration:none;'} %></li>
+      <li><%= link_to "Về gik's Env", about_path, {style: 'text-decoration:none;'} %></li>
+      <li><a href="#" style='text-decoration:none;'>Liên Hệ</a></li>
     </ul>
+
+    <div class="col-xs-5">
+    <%= form_tag search_path, method: :get, class: 'navbar-form', role: 'form' do %>
+        <%= text_field_tag :query, params[:query], placeholder: 'Tìm theo tên' %>
+        <%= button_tag "Tìm kiếm", name: nil, class: 'btn btn-primary', style: 'position: relative; top: -2px;' %>
+    <% end %>
+    </div>
   </div><!-- /.navbar-collapse -->
+
 </nav>

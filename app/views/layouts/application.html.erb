@@ -9,9 +9,7 @@
 <body>
 
 
-<div class="container">
   <%= render 'home/header' %>
-</div>
 
 
 <div class="container">
@@ -29,6 +27,12 @@
     </div>
   </div>
 </div>
+
+<% if request.path == '/about' %>
+  <style type="text/css">
+    background: url("<%= asset_url('about-bg.jpg') %>");
+  </style>
+<% end %>
 
 <br/>
 <br/>

@@ -9,4 +9,5 @@ Howgeekwork::Application.routes.draw do
   get '/about' => 'home#about', as: :about
   get '/lienhe' => 'home#lienhe', as: :lienhe
   get '/people_by_tag/:tag' => 'home#people_by_tag'
+  get '/search' => 'home#search', as: :search
 end
